@@ -39,3 +39,7 @@ body{
     background-color: var(--primary);
     color: var(--dark);
 }
+
+.icons svg{
+    width: 10%;
+}
