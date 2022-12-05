@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -7,38 +7,53 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Tom Chambers</title>
-        <meta name="description" content="Personal Portfolio">
-        <meta name="viewport" content="width=device-width, initial-scale=1">    
+        <title>AboutMe</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="\style.css">
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     </head>
-    <body>
+    <body class="bg-dark">
+        <div id="nav-placeholder"></div>
+        <script>
+            $(function(){
+              $("#nav-placeholder").load("nav.html");
+            });
+        </script>
+    <div>
+        <h1>
+            About me
+        </h1>
+        <img src="\pics/me.jpg" alt="Me" style="max-width: 25%;">
+        <p>
+            Lorem ipsum dolor sit amet, 
+            consectetur adipiscing elit. Aenean sagittis cursus ante vel sagittis. V
+            estibulum a odio turpis. Sed faucibus augue accumsan. 
+        </p>
+        <h3>
+            Education
+        </h3>
+        <p>
+            Lorem ipsum dolor sit amet, 
+            consectetur adipiscing elit. Aenean sagittis cursus ante vel sagittis. V
+            estibulum a odio turpis. Sed faucibus augue accumsan. 
+        </p>
+        <h3>
+            Work
+        </h3>   
+        <p>
+            Lorem ipsum dolor sit amet, 
+            consectetur adipiscing elit. Aenean sagittis cursus ante vel sagittis. V
+            estibulum a odio turpis. Sed faucibus augue accumsan.
+            Lorem ipsum dolor sit amet, 
+            consectetur adipiscing elit. Aenean sagittis cursus ante vel sagittis. V
+            estibulum a odio turpis. Sed faucibus augue accumsan. 
+        </p>
+
+    </div>       
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->              
-        <nav class="mainNav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="AboutMe.html">About Me</a></li>
-                    <li><a href="Projects.html">Projects</a></li>
-                    <li><a href="Hobbies.html">Hobbies</a></li>
-                    <li><a href="Contact.html">Contact</a></li>
-                </ul>
-        </nav>
-        <div>
-            <div>
-                <h1>Tom Chambers</h1>
-                <p>
-                    Lorem ipsum dolor sit amet, 
-                    consectetur adipiscing elit. Aenean sagittis cursus ante vel sagittis. V
-                    estibulum a odio turpis. Sed faucibus augue accumsan, 
-                    suscipit odio a, iaculis sem. Donec sem mi, malesuada pulvinar magna vitae, 
-                    commodo dapibus velit. Donec tincidunt non lorem at tristique. 
-                    Duis viverra interdum justo, nec pellentesque velit tempor vitae.
-                    Proin auctor quis sapien sit amet elementum.
-                </p>
-            </div>
-        </div>        
-        </div>        
+        <![endif]-->
+        
+        <script src="" async defer></script>
     </body>
 </html>
