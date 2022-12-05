@@ -40,6 +40,12 @@ body{
     color: var(--dark);
 }
 
+.mainNav #active{
+    text-decoration: underline;    
+    font-weight: bold;
+}
+
 .icons svg{
     width: 10%;
 }
+
