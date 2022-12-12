@@ -58,6 +58,17 @@ section{
 }
 /* Main Home Page */
 
+.grid-container{
+    display: grid;
+    min-height: 100vh;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: 400px 500px;
+    grid-template-areas:
+        "sideImg" "header"
+        "sideImg" "content"
+}
+
 
 /* Scrolling Projects https://www.youtube.com/watch?v=T33NN_pPeNI&ab_channel=BeyondFireship */
 
