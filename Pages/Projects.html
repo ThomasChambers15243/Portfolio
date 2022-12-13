@@ -34,9 +34,23 @@
         <h1>Projects</h1>
     </section>
     <section class="hidden" id="p1">
-        <h1> Fal Tracker </h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et porttitor elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris scelerisque ultricies neque a feugiat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Nulla eget mattis diam. Etiam facilisis dapibus ante sit amet consequat. Sed tristique metus aliquam elit auctor, nec blandit mi imperdiet. Quisque erat justo, faucibus vel neque eget, rutrum hendrerit risus.                
-            </p>
+        <div class="infoAlign">
+            <a href="https://github.com/ThomasChambers15243/FalTracker" target="_blank">
+                <img src="\pics/Faltracker.jpg" style="max-height:250px;padding-top: 10%;">
+            </a>
+            <h1> Fal Tracker </h1>
+        </div>
+        <div class="infoAlign">
+            <img src="\pics/github.png">
+            <p>Faltracker is a discord bot that is currently running on a student server for over 300 students in our deparment. Written in python, 
+                it scrapes live data from Falmouth Uni’s website to determine whether services (shops, cafes, gyms) are open or closed and their opening times. 
+                This data is then formatted depending on the user’s request and then fed back to the user through the correct discord channel. 
+                <br>
+                Its makes use of the Asynchronous HTTP Client/Server for [asyncio](https://docs.aiohttp.org/en/stable/glossary.html#term-asyncio) 
+                to extract the html data from a uni webpage. 
+                The text in the file is sorted and cleaned for relivance and then the needed data is fed back to the user.
+            </p>            
+        </div>        
         </section>
 
     <section class="hidden" id="p2">
