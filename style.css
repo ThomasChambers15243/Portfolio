@@ -13,6 +13,20 @@ body{
     margin: 0;
 }
 
+.carousel-caption {
+    text-align: center;
+    top: 30vh;
+    text-decoration: solid underline;
+    text-shadow: -3px 2px 5px black;
+    font-size: 500%;
+}
+button{
+    border: none;
+    margin: none;
+    padding: none;
+    size: 100%;
+}
+
 .mainNav ul{
     display: grid;
     grid-gap: 5%;
