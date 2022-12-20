@@ -196,7 +196,7 @@ section{
 .projectLinks{
     display: grid;
     justify-items: center;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     margin: 0;
     padding-left: 20%;
     padding-right: 20%;
@@ -204,7 +204,7 @@ section{
 }
 
 #projectLinksBottom{
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
 }
 
 /* Scrolling Projects https://www.youtube.com/watch?v=T33NN_pPeNI&ab_channel=BeyondFireship */
@@ -226,6 +226,22 @@ section{
 }
 #learnKanji{
     background-color: #e76f51;
+}
+#Dijkstra{
+    background-color: antiquewhite;
+}
+
+.pdfDownload{
+    background-color: #333;
+    color: white;
+    margin: 10px;
+    padding: 10px;    
+}
+
+.pdfDownload:hover{
+    font-size: x-large;
+    padding: 20px;
+
 }
 
 .hidden{
