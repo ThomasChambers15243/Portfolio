@@ -166,7 +166,7 @@ section{
 
 .aboutMeIcons{
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     margin: 0;
     padding-left: 20%;
     padding-right: 20%;
