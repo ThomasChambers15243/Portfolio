@@ -203,6 +203,10 @@ section{
     padding-top: 0%;   
 }
 
+#projectLinksBottom{
+    grid-template-columns: repeat(4, 1fr);
+}
+
 /* Scrolling Projects https://www.youtube.com/watch?v=T33NN_pPeNI&ab_channel=BeyondFireship */
 
 .projectsTitle{
