@@ -7,7 +7,13 @@
     ---light-grey: #ddd;
     --shadow: 0 1px 5px rgba(111,111,111,0.8);
 }
-
+html {
+    scroll-behavior: smooth;
+  }
+a{
+    text-decoration: none;
+    color: var(--dark);
+}
 ::-webkit-scrollbar{
     width: 20px; 
     height: auto;
@@ -44,41 +50,7 @@
     }
 }
 
-.testClass{
-    transform: translateX(-100%);
-    opacity: 0;
-    filter:blur(5px);
-    animation: left-to-right 1.5s ease-in forwards;    
-}
 
-#item1{
-    animation-delay: 500ms;
-}
-#item2{
-    animation-delay: 800ms;
-}
-
-.logos{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0px;
-    margin: 0%;
-}
-
-.logo{
-    padding: 0;
-}
-
-.logos:nth-child(2){
-    animation-delay: 200ms;
-}
-.logos:nth-child(3){
-    animation-delay: 400ms;
-}
-.logos:nth-child(4){
-    animation-delay: 600ms;
-}
 
 /* Animations end */
 body{
@@ -152,7 +124,36 @@ section{
 .infoAlign{
     display: grid;
     grid-template-columns: repeat(2, 1fr);  
-    align-items: center;    
+    align-items: center; 
+    column-gap: 1%;
+}
+
+.info4x4Grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2%;
+    column-gap: 2%;
+}
+
+.basicImg{
+    Max-width: 100%;
+    justify-content: center;
+}
+
+.educationOpening {
+    padding-right: 10%;
+    padding-left: 10%;
+    font-size: large;
+}
+
+.educationOpening h1{
+    font-weight:300;
+    font-size: 500%;
+    text-decoration: underline;
+}
+
+.educationOpening p{
+    margin: 0 10% 0 10%;
 }
 
 .educationAlign{
@@ -182,7 +183,7 @@ section{
 }
 
 .showAboutMe{
-    animation: fade-in 1s ease-in forwards;
+    animation: fade-in 0.8s ease-in forwards;
     font-size: large;
 }
 
@@ -191,6 +192,15 @@ section{
     text-decoration: underline;
 }
 
+.projectLinks{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 0%;   
+}
 
 /* Scrolling Projects https://www.youtube.com/watch?v=T33NN_pPeNI&ab_channel=BeyondFireship */
 
@@ -203,14 +213,14 @@ section{
 }
 
 
-#p1{
+#falTracker{
     background-color: #f4a261;
 }
-#p2{
-    background-color: #e76f51;
-}
-#p3{
+#guitar{
     background-color: #457b9d;
+}
+#learnKanji{
+    background-color: #e76f51;
 }
 
 .hidden{
@@ -235,3 +245,34 @@ section{
 
 
 
+
+form {
+    /* add some basic styles to the form */
+    width: 500px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+}
+  
+  form label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+  
+  form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+  
+  form input[type="submit"] {
+    background-color: var(--dark);
+    color: white;
+    font-size: 18px;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+}
