@@ -14,5 +14,6 @@
             "password": "s1oph9Da!te36uveqotH",
             "connectionTimeout": 1000
         }
-    ]
+    ],
+    "dataworkspace.excludedProjects": []
 }

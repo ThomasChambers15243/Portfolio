@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "VwhnnHHZjUro5MLLHWMi+2Ly3FXLu74rCFZrF9Yt2HAY5yZoXTzTV1vTDEAU4xKJ1Hu/H7DMIigmbyBME9MaXA==",
+  "success": true,
+  "projectFilePath": "c:\\Users\\Thoma\\Documents\\Games AC\\CompSci Year 2\\Portfolio\\PortfolioData\\PortfolioData.sqlproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Thoma\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.0\\microsoft.netframework.referenceassemblies.1.0.0.nupkg.sha512",
+    "C:\\Users\\Thoma\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net46\\1.0.0\\microsoft.netframework.referenceassemblies.net46.1.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
