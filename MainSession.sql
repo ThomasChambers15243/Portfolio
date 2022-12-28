@@ -27,7 +27,8 @@ CREATE TABLE Projects (
 );
 
 --@block insert test values
-INSERT INTO content values(1,'Kodland','sdfsdfsdf');
+INSERT INTO content values(1,'Kodland','sdfsdfsdf','main');
+--@block to select
 SELECT * from content where articleName = 'Kodland';
 
 --@block del tables
