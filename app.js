@@ -1,18 +1,3 @@
-
-// const observerProject = new IntersectionObserver((entries) => {
-//     entries.forEach((entry) => {
-//         console.log(entry);
-//        if (entry.isIntersecting) {
-//             entry.target.classList.add('show');
-//        } else {
-//             entry.target.classList.remove('show');
-//        }
-//     });
-// });
-
-// const hiddenElementsProject = document.querySelectorAll('.hidden');
-// hiddenElementsProject.forEach((el) => observerProject.observe(el));
-
 const observer = new IntersectionObserver((entries) => {
      entries.forEach((entry) => {
          console.log(entry.target.className);
