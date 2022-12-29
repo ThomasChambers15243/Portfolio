@@ -222,7 +222,7 @@ form input[type="submit"] {
 /* Scrolling Projects https://www.youtube.com/watch?v=T33NN_pPeNI&ab_channel=BeyondFireship */
 
 .projectsTitle{
-    background-image: url("\pics/projectsCollage.png");    
+    background-image: url("\pics/ProjectsEvidence/projectsCollage.png");    
     text-decoration: solid underline;
     color: white;
     text-shadow: -3px 2px 5px black;
