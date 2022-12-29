@@ -4,16 +4,12 @@
     --primary: #ddd;
     --dark: #333;
     --light: #fff;
-    ---light-grey: #ddd;
+    --light_grey: #ddd;
     --shadow: 0 1px 5px rgba(111,111,111,0.8);
 }
-html {
-    scroll-behavior: smooth;
-  }
-a{
-    text-decoration: none;
-    color: var(--dark);
-}
+
+/* Webkit is used to customise the scroll bar and its functionality */
+
 ::-webkit-scrollbar{
     width: 20px; 
     height: auto;
@@ -30,6 +26,9 @@ a{
 ::-webkit-scrollbar-thumb:hover {
     background-color: #788285;
   }
+
+
+
 /* Animations */
 
 @keyframes left-to-right {
@@ -39,6 +38,7 @@ a{
         filter: blur(0);
     }
 }
+
 
 @keyframes fade-in {
     100% {
@@ -50,28 +50,62 @@ a{
     }
 }
 
+/* Basic Tags*/
 
-
-/* Animations end */
 body{
-    background-color: var(---light-grey);
+    background-color: var(--light_grey);
     margin: 0;
 }
 
-.carousel-caption {
-    text-align: center;
-    top: 30vh;
-    text-decoration: solid underline;
-    text-shadow: -3px 2px 5px black;
-    font-size: 500%;
-}
-button{
-    border: none;
-    margin: none;
-    padding: none;
-    size: 100%;
+html {
+    scroll-behavior: smooth;
+  }
+
+section{
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+    margin: 0;
 }
 
+a{
+    text-decoration: none;
+    color: var(--dark);
+}
+
+/* Contact me Form and form Labels  */
+form {
+    width: 500px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+}
+  
+form label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+  
+form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+  
+form input[type="submit"] {
+    background-color: var(--dark);
+    color: white;
+    font-size: 18px;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/*  Nav Bar */
 .mainNav ul{
     display: grid;
     grid-gap: 5%;
@@ -104,13 +138,6 @@ button{
     font-weight: bold;
 }
 
-section{
-    display: grid;
-    place-items: center;
-    align-content: center;
-    min-height: 100vh;
-    margin: 0;
-}
 
 /* Main Home Page */
 
@@ -129,17 +156,43 @@ section{
     column-gap: 1%;
 }
 
-.info4x4Grid{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: 2%;
-    column-gap: 2%;
-}
 
 .basicImg{
     Max-width: 100%;
     justify-content: center;
 }
+
+
+.hiddenAboutMe{
+    opacity: 0;
+    filter:blur(5px);
+    transition: all 1.5s;    
+    transform: translateY(5%);
+}
+
+.showAboutMe{
+    animation: fade-in 0.8s ease-in forwards;
+    font-size: large;
+}
+
+
+.showAboutMe h1{
+    text-decoration: underline;
+}
+
+.aboutMeIcons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 2%;    
+}
+.aboutMeIcons img{
+    max-width: 50%;
+}
+
+/* Teaching Page */
 
 .educationOpening {
     padding-right: 10%;
@@ -164,33 +217,16 @@ section{
     column-gap: 20px;
 }
 
-.aboutMeIcons{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    margin: 0;
-    padding-left: 20%;
-    padding-right: 20%;
-    padding-top: 2%;    
-}
-.aboutMeIcons img{
-    max-width: 50%;
-}
+/* Scrolling Proejcts */
+/* Inspiration came from the video below */
+/* Scrolling Projects https://www.youtube.com/watch?v=T33NN_pPeNI&ab_channel=BeyondFireship */
 
-.hiddenAboutMe{
-    opacity: 0;
-    filter:blur(5px);
-    transition: all 1.5s;    
-    transform: translateY(5%);
-}
-
-.showAboutMe{
-    animation: fade-in 0.8s ease-in forwards;
-    font-size: large;
-}
-
-
-.showAboutMe h1{
-    text-decoration: underline;
+.projectsTitle{
+    background-image: url("\pics/projectsCollage.png");    
+    text-decoration: solid underline;
+    color: white;
+    text-shadow: -3px 2px 5px black;
+    font-size: 800%;
 }
 
 .projectLinks{
@@ -207,28 +243,11 @@ section{
     grid-template-columns: repeat(5, 1fr);
 }
 
-/* Scrolling Projects https://www.youtube.com/watch?v=T33NN_pPeNI&ab_channel=BeyondFireship */
-
-.projectsTitle{
-    background-image: url("\pics/projectsCollage.png");    
-    text-decoration: solid underline;
-    color: white;
-    text-shadow: -3px 2px 5px black;
-    font-size: 800%;
-}
-
-
-#falTracker{
-    background-color: #f4a261;
-}
-#guitar{
-    background-color: #457b9d;
-}
-#learnKanji{
-    background-color: #e76f51;
-}
-#Dijkstra{
-    background-color: antiquewhite;
+.info4x4Grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2%;
+    column-gap: 2%;
 }
 
 .pdfDownload{
@@ -264,36 +283,16 @@ section{
     text-decoration: underline;
 }
 
-
-
-
-form {
-    /* add some basic styles to the form */
-    width: 500px;
-    padding: 20px;
-    background-color: #f4f4f4;
-    border: 1px solid #ccc;
+/* Colour for different sections depending on project */
+#falTracker{
+    background-color: #f4a261;
 }
-  
-  form label {
-    display: block;
-    font-size: 18px;
-    margin-bottom: 10px;
+#guitar{
+    background-color: #457b9d;
 }
-  
-  form input, form textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-    box-sizing: border-box;
+#learnKanji{
+    background-color: #e76f51;
 }
-  
-  form input[type="submit"] {
-    background-color: var(--dark);
-    color: white;
-    font-size: 18px;
-    padding: 12px 20px;
-    border: none;
-    cursor: pointer;
+#Dijkstra{
+    background-color: antiquewhite;
 }
