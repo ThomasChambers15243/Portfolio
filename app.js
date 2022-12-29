@@ -19,17 +19,3 @@ const observer = new IntersectionObserver((entries) => {
 
  const hiddenElements_AboutMe = document.querySelectorAll('.hiddenAboutMe');
  hiddenElements_AboutMe.forEach((el) => observer.observe(el));
-
-// const observerAboutMe = new IntersectionObserver((entries) => {
-//      entries.forEach((entry) => {
-//          console.log(entry);
-//         if (entry.isIntersecting) {
-//              entry.target.classList.add('showAboutMe');
-//         } else {
-//           entry.target.classList.remove('showAboutMe');
-//         }
-//      });
-//  });
-
-// const hiddenElementsAboutMe = document.querySelectorAll('.hiddenAboutMe');
-// hiddenElementsAboutMe.forEach((el) => observerAboutMe.observe(el));
