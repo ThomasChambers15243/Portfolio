@@ -22,7 +22,6 @@ CREATE TABLE Projects (
   projectLink text
 );
 
-
 --@block del tables
 drop TABLE projects;
 drop TABLE contactme;
