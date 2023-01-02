@@ -19,4 +19,6 @@ CREATE TABLE Projects(
 
 
 --@block Add Content
-INSERT Into
+INSERT INTO Content VALUES(
+
+);
