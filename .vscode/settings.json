@@ -2,17 +2,16 @@
     "sqltools.connections": [
         {
             "mysqlOptions": {
-                "authProtocol": "xprotocol"
+                "authProtocol": "default"
             },
             "previewLimit": 50,
             "server": "localhost",
-            "port": 33060,
+            "port": 3306,
             "driver": "MySQL",
-            "name": "Test",
-            "database": "portfolio",
+            "name": "Main",
+            "database": "main",
             "username": "root",
-            "password": "s1oph9Da!te36uveqotH",
-            "connectionTimeout": 1000
+            "password": "pass"
         }
     ],
     "dataworkspace.excludedProjects": []
