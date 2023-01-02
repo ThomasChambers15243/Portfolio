@@ -1,15 +1,11 @@
-
---@block create tables
+--@block Create All Tables
 CREATE TABLE Content (
   id int NOT NULL PRIMARY KEY,
+  articleLocation varchar(255),  
   articleName varchar(255),
-  articleText text,
-  articleLocation varchar(255)
+  articleText text
 );
 
---@block 2
-drop table ContactMe;
-drop table Projects;
 CREATE TABLE ContactMe (
   id int NOT NULL PRIMARY KEY,
   userName varchar(255),
@@ -26,10 +22,6 @@ CREATE TABLE Projects (
   projectLink text
 );
 
---@block insert test values
-INSERT INTO content values(1,'Kodland','sdfsdfsdf','main');
---@block to select
-SELECT * from content where articleName = 'Kodland';
 
 --@block del tables
 drop TABLE projects;
