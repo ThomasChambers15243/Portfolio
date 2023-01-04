@@ -87,7 +87,7 @@ All content and articles are stored in the main database. There are 3 tables, Co
 
 - ContactMe is used to store user information from the contact form.
 
-![DB tables](DB design.jpg)
+<img width="296" alt="DB Tables" src="DB design.jpg">
 
 Currently, the database connection isn't working, so raw html is shown. However, in a live deployment, all html article text, including the projects page,
 
