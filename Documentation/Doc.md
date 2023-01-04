@@ -87,7 +87,7 @@ All content and articles are stored in the main database. There are 3 tables, Co
 
 - ContactMe is used to store user information from the contact form.
 
-![DB tables](Documentation\DB design.jpg)
+![DB tables](DB design.jpg)
 
 Currently, the database connection isn't working, so raw html is shown. However, in a live deployment, all html article text, including the projects page,
 
@@ -99,9 +99,14 @@ would be called from the main database. Doing this allows you to easily find any
 
   
 
-HCI (Human-computer interaction) analyse investigates how users interact with the software. I put together a form and gave it out to students, along with the website, for review. From their responses, the main criticisms were the lack of content on the teaching page and cohesion across the site. To fix this, INSERT ABIYOT TEACHING. I also removed the background image from projects to keep inline with the minimalist approach.
+HCI (Human-computer interaction) analyse investigates how users interact with the software. I put together a form and gave it out to students, along with the website, for review. From their responses, the main criticisms were the lack of content on the teaching page and cohesion across the site. To fix this, INSERT ABIYOT TEACHING. I also removed the background image from projects to keep inline with the minimalist approach. 
 
-  
+The site also didn't properly scale with different viewport sizes, as was brought up also in the questionnaire. This has been fixed in an effort to ensure accessibility, as seen by a 100% score in the lighthouse reports. Actions taken:
+- Viewport, device width and scale are described in a meta tag at the top of every page.
+- Images have alt tags for areas with poor internet or to be accessible to screen readers. 
+- HTML element has a valid language attribute
+- Pages contain headers and landmark regions, allowing keyboard users to navigate the page more efficiently.
+- Each page has a title, optimizing the page for search engines, and improving the user experience.
 
 ### Performance Analyse
 
@@ -115,7 +120,7 @@ From these and other tools, it was shown that the loading of JavaScript files wa
 
   
 
-One script was a short function, but the other was a third-party script, so optimizing that wasn't an option. The solution was to defer them both at the top of the page. This means that the script will only load once the HTML parsing is completely finished. Therefor, the long task no longer delays the loading and useage of the site.
+One script was a short function, but the other was a third-party script, so optimizing that wasn't an option. The solution was to defer them both at the top of the page. This means that the script will only load once the HTML parsing is completely finished. Therefore, the long task no longer delays the loading and usage of the site.
 
   
 
