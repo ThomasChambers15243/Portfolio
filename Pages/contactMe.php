@@ -15,10 +15,10 @@ if ($conn->connect_error) {
 }
 
 $sqlquery = 'INSERT INTO ContactMe VALUES
-    ($_POST["name"], $_POST["email"], $_POST["message"])'
+    ($_POST["name"], $_POST["email"], $_POST["message"])';
 
 if ($conn->query($sql) === TRUE) {
-    echo "record inserted successfully";
+    echo "Success";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
