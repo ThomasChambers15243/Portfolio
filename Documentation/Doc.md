@@ -12,36 +12,13 @@ The website is a portfolio of my professional self. It involves current and prio
   
 
 - Who Am I
-
-  
-
-- Detailing who I am, brief of hobbies and some contact links
-
-  
-
+  - Detailing who I am, brief of hobbies and some contact links
 - Teaching
-
-  
-
-- A description of my experience tutoring and teaching.
-
-  
-
+  - A description of my experience tutoring and teaching.
 - Projects
-
-  
-
-- A collection of some of my previous projects
-
-  
-
+  - A collection of some of my previous projects
 - Contact Me
-
-  
-
-- A simple contact form if the user wanted direct email communication
-
-  
+  - A simple contact form if the user wanted direct email communication
 
   
 
