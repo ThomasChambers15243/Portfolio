@@ -39,10 +39,15 @@
 
         <section class="pilot">
             <h1>Pilot Study</h1>
-            <p>This page contains information about a pilot study that was conducted in preparation for my University Dissertation.
-                <br>First shown is the literature review, then methodology of the pilot study itself and finally the results of the pilot study.
-                <br></br>https://github.com/ThomasChambers15243/Dissertation
+            <p><b>This page contains information about a pilot study that was conducted in preparation for my University Dissertation, 
+                which aims to investigate the practicality of using gpt3.5 to write code in place of human code.
+                First shown is the literature review, then methodology of the pilot study itself and finally the results of the pilot study.</b>
             </p>
+            <div>
+                <a href="https://github.com/ThomasChambers15243/Dissertation" target="_blank">
+                    <img src="../pics/icons/github.png" alt="Github Icon" style="width:50px">                
+                </a>    
+            </div>
             <h2>Background Review</h2>
             <h3>Introduction</h3>
             <p>This study will investigate the practicality of using large-language
@@ -52,10 +57,10 @@
                 few years, these models have been used to generate code in many
                 programming languages, straight into a programmer’s IDE. With
                 many large tech companies investing in generative models, such as
-                Google and META [ 20 , 28], and bespoke versions of these models
+                Google and META [ <a class="source" href="https://ai.meta.com/llama/">20</a>, <a class="source" href="https://blog.google/technology/ai/bard-google-ai-search-updates/">28</a>], and bespoke versions of these models
                 being used commercially for code productivity, such as Github’s
-                Copilot and Sourcery [ 22 , 25], their use by programmers is rapidly
-                increasing. LLM are often described as a black box [3], this describes
+                Copilot and Sourcery [ <a class="source" href="https://github.com/features/copilot">22</a> , <a class="source" href="https://sourcery.ai/">25</a>], their use by programmers is rapidly
+                increasing. LLM are often described as a black box, this describes
                 how the user can input data and receive a response, without an
                 understanding of the internals. 
                 <br><br>        
@@ -70,7 +75,7 @@
                 and experienced programmers alike. The need to understand the
                 level of quality of outputs is paramount before these generation
                 tools become widespread in education and industry, so the conse-
-                quences can be best understood [1]. The focus of this study will
+                quences can be best understood. The focus of this study will
                 be on Open-AI’s GPT models due to their API, success and public
                 prominence.</p>
             <h3>Understanding Code Generation</h3>
@@ -78,15 +83,15 @@
                 cesses already, perhaps most well-known is the use in compilers to
                 produce code optimisation and executable machine code. Further-
                 more, code generation from a human prompt has been discussed for
-                over 50 years. PROW [35 ] was an early code generation tool that
+                over 50 years. PROW [<a class="source" href="https://www.semanticscholar.org/paper/PROW%3A-A-Step-Toward-Automatic-Program-Writing-Waldinger-Lee/577e96521d62b9ebb5fd67412a21b02e9cd67b90">35</a>] was an early code generation tool that
                 could produce Perl code from an input written in predicate calculus.
                 However, as discussed two years later by Manna and Waldinger
-                [ 18 ], "programmers might find such a language lacking in read-
+                [ <a class="source" href="https://dl.acm.org/doi/10.1145/362566.362568">18</a> ], "programmers might find such a language lacking in read-
                 ability and conciseness." They went on to predict a future program
                 synthesizer; one that works with the programmer to produce seg-
                 ments of code that can be incorporated into the program. They
                 argue it would be a "more practical system" with greater "power".
-                Fifty years later in 2022, with the public release of ChatGPT [ 24 ],
+                Fifty years later in 2022, with the public release of ChatGPT [ <a class="source" href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes#h_4799933861">24</a> ],
                 public awareness of LLM significantly increased due to the wide
                 adaption of its chat feature. Generation models have been used
                 for years to write essays, generate art and synthesise an actor’s
@@ -361,14 +366,16 @@
                         is a parametric test that compares whether there is a statistically
                         significant difference between the two groups’ means.<br>
                         T-Tests can only be used to test data that is normally distributed, so
-                        a Shapiro test is used to ensure this before further analysis.
+                        a Shapiro test is used to ensure this before further analysis.                        
                         <ul>
                             <li><b>The independent variables</b> are the two groups, the collection
-                                of GPT generations and human answers.</li>
-                        </ul>
+                                of GPT generations and human answers.
+                            </li>
                         <li><b>The dependent variable</b> is metric score for each sample.
                             The data is the sum total of the code's Halstead metrics. 
-                            Its numerically continuous, ratio values. </li>
+                            Its numerically continuous, ratio values. 
+                        </li>
+                        </ul>
 
                         <br><br>
                         </p>                                                  
@@ -390,48 +397,145 @@
                                 <td>20</td>
                                 <td>1237.0</td>
                                 <td>1263.1</td>
-                                <td>-26.1</td>
+                                <td class = "negativeNumber">-26.1</td>
                             </tr>
                             <tr>
                                 <td>2</td>
                                 <td>20</td>
                                 <td>7003.4</td>
                                 <td>5892.2</td>
-                                <td>1111.2</td>
+                                <td class = "positiveNumber">1111.2</td>
                             </tr>
                             <tr>
                                 <td>3</td>
                                 <td>20</td>
                                 <td>5071.8</td>
                                 <td>5789.6</td>
-                                <td>-717.8</td>
+                                <td class = "negativeNumber">-717.8</td>
                             </tr>
                             <tr>
                                 <td>4</td>
                                 <td>20</td>
                                 <td>259.5</td>
                                 <td>746.2</td>
-                                <td>-486.7</td>
+                                <td class = "negativeNumber">-486.7</td>
                             </tr>
                             <tr>
                                 <td>5</td>
                                 <td>20</td>
                                 <td>206.8</td>
                                 <td>176.1</td>
-                                <td>10</td>
+                                <td class = "positiveNumber">10</td>
                             </tr>
                         </table>
                         <h4>Interpreting Results</h4>
-                        <p>
-                            
-                            The difference is calculated by human score - gpt score. The lower the score, the better the metric.
+                        <p>                        
+                            The difference is calculated by human score - gpt score. The lower the score, the better the metric. 
+                            Red scores mean that the human score was lower than the gpt score, meaning that the human code was rated better.
                             Overall, gpt generations scores 436.6 total points higher than human answers.<br>
-                            
+                            The results show that gpt3.5 can generate code successfully, that produces competitive results to human answers.
+                            However, human results still scored higher.
+                            <br><br>
+                            Performing the T-Test showed that the alternative hypotheses was true only with a P-Value of
+                            0.5. With such as high P-value, the results are not statistically significant and 
+                            the null hypotheses cannot be rejected. However, the results are promising, since generated code
+                            did score lower for some problems, showing that gpt3.5 can generate code that is competitive with human answers.
+                            <br>
+                        </p>
+                        <p>
+                            <h4>limitations</h4>
+                            <ul>
+                            <li>
+                                <b>Small Number of Samples</b>. Only 5 coding problems were used. Its hard to decern any significant different
+                                when so few are used.
+                            </li>
+                            <li>
+                                <b>Problems were relatively simple</b>. The coding problems given to the human writer and to 
+                                gpt3.5 are considered junior coding problems, that could be answered by a programmer with very little
+                                python knowledge. It might be the case that gpt3.5 couldn't show its full potential with such problems.
+                            </li>
+                            <li>
+                                <b>Temperature was constant</b>. For all iterations of generated code, the same temperature of 0.6 was used.
+                                This was done to ensure consistency, but it might be the case that a higher temperature would have produced
+                                better results, due to the higher variance in outputs.
+                            </li>
+                            </ul>                            
+                            <h4>Main Study Changes</h4>
+                            <ul>
+                                <li>
+                                    <b>Use a larger amount of samples</b>. For the main study, 20 samples will be used. This will give an effect
+                                    size of 0.58, which is considered medium and visible to an observant observer.
+                                </li>
+                                <li>
+                                    <b>Use a greater range of questions</b>. The 20 samples in the main study will allow for a greater 
+                                    range of questions. The questions will range from intro-class level to more advanced, to test the
+                                    ability of basic string manipulation algorithmic understanding.                                    
+                                </li>
+                                <li>
+                                    <b>Three total Temperatures</b>. A range of 3 temperatures will be used, 0.3, 0.6, 0.9. This will align with the
+                                    standard put fourth by the openAI team in their first paper. unveiling gpt3.5. Perhaps gpt3.5 can produce
+                                    better results at a higher temperature or lower temperatures.
+                                </li>
+                            </ul>
                         </p>
                     </div>
             </div>
+            <button class="next-button" style="margin-top:25px">The Code Base</button>
         </section>
-
+        <section>
+            <div class="pilot">
+                <h1>The Code Base</h1>
+                <br><br>
+                <h2>Class Diagrams</h2>
+                <h3>Analyser Class</h3>
+                <div>
+                <figure style="display: flex; flex-direction: column; align-items: center;">
+                    <img src="..\Documentation\art\analyzerClass.jpg" alt="Analyser Class Diagram">
+                    <figcaption>Class Diagram for the Analyser Class</figcaption>
+                    </figure>
+                </div>
+                <h3>Gather Class</h3>
+                <div>
+                <figure style="display: flex; flex-direction: column; align-items: center;">
+                    <img src="..\Documentation\art\gatherClass.jpg" alt="Gather Class Diagram">
+                    <figcaption>Class Diagram for the Gather Class</figcaption>
+                    </figure>
+                </div>
+                <h3>Lexer Class</h3>
+                <div>
+                <figure style="display: flex; flex-direction: column; align-items: center;">
+                    <img src="..\Documentation\art\lexerClass.jpg" alt="Lexer Class Diagram">
+                    <figcaption>Class Diagram for the Lexer Class</figcaption>
+                    </figure>
+                </div>
+                <br><br>
+                
+                <h2>UML Diagrams Of Software Used</h2>
+                <br><br>
+                
+                <h3>Study Pipeline</h3>
+                <div>
+                    <figure style="display: flex; flex-direction: column; align-items: center;">
+                        <img src="..\Documentation\art\studyPipline.jpg" alt="Study Pipeline">
+                        <figcaption>UML Diagram for the Study Pipeline</figcaption>
+                        </figure>
+                </div>
+                <h3>Data Collection UML</h3>
+                <div>
+                    <figure style="display: flex; flex-direction: column; align-items: center;">
+                        <img src="..\Documentation\art\dataCollectionUml.jpg" alt="Data Collection">
+                        <figcaption>UML Diagram for the Data Collection</figcaption>
+                        </figure>
+                </div>
+                <h3>Lexer UML</h3>
+                <div>
+                    <figure style="display: flex; flex-direction: column; align-items: center;">
+                        <img src="..\Documentation/art/lexerUml.png" alt="Lexer">
+                        <figcaption>UML Diagram for the Lexer</figcaption>
+                        </figure>
+                </div>
+            </div>
+        </section>>
 
     </body>
 </html>

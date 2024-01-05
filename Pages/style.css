@@ -104,6 +104,19 @@ table td, table th {
     padding: 10px 15px;
 }
 
+.positiveNumber {
+    color: green;
+}
+
+.negativeNumber {
+    color: red;
+}
+
+a.source{
+    text-decoration: underline;
+    text-decoration-color: blue;
+}
+
 /* Contact me Form and form Labels  */
 form {
     width: 500px;
