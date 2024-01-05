@@ -97,7 +97,7 @@
                 for years to write essays, generate art and synthesise an actor’s
                 voice, the implications of such have caused many to re-evaluate the
                 current state and future of educational and business environments
-                [ 7, 10 , 16 , 37 ], but more recently the use of generation has become
+                [ <a class="source" href="https://arxiv.org/abs/2303.10130">7</a>, <a class="source" href="https://zenodo.org/records/7644359">10</a> , <a class="source" href="https://www.mdpi.com/2227-7102/13/4/410">16</a> , <a class="source" href="https://arxiv.org/abs/2112.04359">37</a> ], but more recently the use of generation has become
                 more relevant in a programmer’s workflow.</p>
             <h3>The Background of LLM</h3>
             <p>The rising popularity of LLM generation is in-large due to their
@@ -122,8 +122,7 @@
                 to human intelligence. The accurate predictions serve to mimic
                 human intelligence.<br><br>
                 In 2021 OpenAI released their fine-tuned model GPT-3 codex,
-                trained on 54 million public software repositories hosted on GitHub
-                [ 4]. Released the same year [22], Github’s CoPilot is a generation
+                trained on 54 million public software repositories hosted on GitHub. Released the same year, Github’s CoPilot is a generation
                 model with a heavy reliance on Codex. To test the functional perfor-
                 mance of Codex, the team behind OpenAI released the humanEval
                 data set. A public repository to benchmark the performance of
@@ -136,10 +135,10 @@
                 erencing non-existent variables. Within their data set, Codex had a
                 higher performance than all previous GPT-model, solving 70.2% of
                 problems with 100 samples. The functional performance of Codex
-                and models alike have been replicated numerously [26 , 29 , 38 , 40 ],
+                and models alike have been replicated numerously [<a class="source" href="https://dl.acm.org/doi/10.1145/3524842.3528470">26</a> , <a class="source" href="https://dl.acm.org/doi/10.1145/3587102.3588805">29</a>],
                 with Codex being able to outperform students in even CS1 ques-
                 tions and, although performance dropped, still compete with stu-
-                dents in CS2 questions [9]. CS1 questions covered the basics of
+                dents in CS2 questions [<a class="source" href="https://dl.acm.org/doi/10.1145/3576123.3576134">9</a>]. CS1 questions covered the basics of
                 programming, with topics such as "variables, arithmetic, condi-
                 tional branches, loops, reading and writing to files, and functions".
                 CS2 took questions further, covering questions about hashing, dis-
@@ -153,11 +152,11 @@
                 however, several technical and practical limitations should be care-
                 fully understood.<br><br>
                 Firstly, models are not uniform across languages. Nguyen and
-                Nadi [ 26 ] found that CoPilot functionally performed best when
+                Nadi [ <a class="source" href="https://dl.acm.org/doi/10.1145/3524842.3528470"></a> ] found that CoPilot functionally performed best when
                 writing in Java and worst in Javascript. Other researchers have
                 written their own fine-tuned model, Poly-Coder, based on the GPT-
                 2 architecture, which outperforms all GPT-based models in the C
-                language [ 40 ]. Its was argued that the low score in C was possibly
+                language [ <a class="source" href="https://dl.acm.org/doi/10.1145/3520312.3534862">40</a> ]. Its was argued that the low score in C was possibly
                 due to a problem with the data-set and fine-tuning process being
                 over-reliant on Python and under focused in C.<br><br>
                 Secondly, the results are not one-shot. Codex can respond with
@@ -169,21 +168,21 @@
                 this compared students to Codex, except also gave students multiple
                 attempts at solutions, their success frequently increases with each
                 attempt. However, they found that Codex was still competitive with
-                students, even after multiple submissions [9].<br><br>
+                students, even after multiple submissions [<a class="source" href="https://dl.acm.org/doi/10.1145/3576123.3576134">9</a>].<br><br>
                 Thirdly, responses vary significantly depending on the value of
                 the model’s temperature. Temperature is a value used in neural net-
                 works to increase entropy (effectively randomness) in the softmax
                 distribution, the distribution which controls the quality and diver-
                 sity of the predictions. This affects the output layer where tokens
                 are sampled from. A higher temperature increases how ’surprising’
-                the next token will be [ 12, 36 ]. Multiple studies have found that
+                the next token will be. Multiple studies have found that
                 with a higher temperature, models can achieve a higher pass@k
                 score at larger samples, despite producing more erroneous code.
                 Across multiple studies, researchers found optimal performance at
                 T0.6, with T0.2 and T0.8 also performing well. Temperature and
                 sample size were found to be proportional, this is likely due to the
                 diversity of code at higher temperatures needing a higher sample
-                rate to score [4, 27, 40].<br><br>
+                rate to score [<a class="source" href="https://arxiv.org/abs/2211.07842">27</a> <a class="source" href="https://dl.acm.org/doi/10.1145/3520312.3534862">40</a>].<br><br>
                 Fourthly, there is a significant reason to question whether the
                 success of generated code translates into actual programmer perfor-
                 mance, even with their access becoming more streamlined. CoPilot
@@ -193,7 +192,7 @@
                 file, currently in beta. However, when a programmer uses a piece of
                 code, they have to evaluate the code before use as it might contain
                 bugs, be a sub-optimal solution or generally poorly written. In a
-                study of 24 participants using Copilot [34], they found that even
+                study of 24 participants using Copilot [<a class="source" href="https://dl.acm.org/doi/10.1145/3491101.3519665">40</a>], they found that even
                 though code generation gave promising results, it did not improve
                 overall programming time or the success rate of those participants
                 using the tool. CoPilot even led to more task failures in the medium
@@ -213,7 +212,7 @@
                 this problem, hypothesising that code generation is an efficient tool
                 for seasoned programmers, but can turn into a liability when used
                 by novice programmers who do not fully understand the problem,
-                context and generated solution [23].</p>
+                context and generated solution [<a class="source" href="https://www.sciencedirect.com/science/article/abs/pii/S0164121223001292?via%3Dihub">23</a>].</p>
                 <h3>Quality Code</h3>
                 <p>Good quality code is vital for creating maintainable software that
                     can last, but still, there is discourse around what good quality code
@@ -229,21 +228,21 @@
                     test cases. If done correctly, he claims that "the correctness can be
                     shown a priori", so a need for zero test cases. Dijkstra laid out a
                     fundamental argument for why quality code is necessary which
-                    has been built upon ever since [6].<br><br>
+                    has been built upon ever since.<br><br>
                     Recognising when code is "intellectually manageable" is a com-
                     plex issue. Greg Michaelson wrote that "Programming style is no-
                     toriously difficult to characterise" and that imperative languages
                     have been the "source of endless theological disputes", such as the
                     use of GOTOS, the use of recursion over iteration or the number
-                    of parameters a sub-program should have [21 ]. While for the most
+                    of parameters a sub-program should have. While for the most
                     part, experts agree on the abandonment of goto’s in structured
-                    programming [5, 15], the rest are still up for debate.
+                    programming, the rest are still up for debate.
                     The quality of generated code is vital if the produced code is
                     ever expected to be used in a practical sense. However, the common
                     mantra, garbage in, garbage out is just as true now, the quality of
                     written code largely depends on the quality of the code within the
                     data set. Unfortunately, the fine details of the data sets used for
-                    available LLM are kept private, [ 40], so to assess the quality of code,
+                    available LLM are kept private, so to assess the quality of code,
                     we can use code metrics as an attempt to judge the outputted code.</p>
                     <h3>Code Analysis</h3>
                     <div>
@@ -251,12 +250,12 @@
                     Pre-1980, software metrics generally worked as a regression model
                     between two variables, conceptually simple, mostly relying on
                     resources and quality. However, during the mid-late 70s, software
-                    metrics saw a new direction with Halstead and McCabe [ 8 ]. They
+                    metrics saw a new direction with Halstead and McCabe. They
                     extracted information from the code design rather than just the
                     static code.
                     Halstead developed a set of formulas that, when given a code
                     input, would produce a series of scores based on the number of
-                    unique and total amount of operands and operators used [17 ]. The
+                    unique and total amount of operands and operators used. The
                     definition of Operands and Operators has slightly different mean-
                     ings depending on the implementation, but generally, operators
                     are all normal operators, keywords and brackets of all kinds ( (),
@@ -277,7 +276,7 @@
                     Kurt Starsinic developed a module, Fathom.pm, to apply the Fleshc-
                     Kincaid test to Perl code, producing a score based on the number
                     of tokens per expression, expressions per statement and statements
-                    per subroutine [32].<br><br>
+                    per subroutine.<br><br>
                     The formula would produce a score from 1 - 7, where 5 is "Trival"
                     and 7 is "Very Hairy". However, he did not provide any justification
                     for the weights used in the formula except that they were fined-
@@ -286,12 +285,12 @@
                     also using the FLesch-Kincaid test. They introduced the Software
                     Readability Ease Score (SRES) by treating the "lexemes of a pro-
                     gramming language as syllables, its statements as words, and its
-                    units of abstraction as sentences" [ 2]. They argued that this type
+                    units of abstraction as sentences" . They argued that this type
                     of static code analysis was a clear indicator of how readable, and
                     thus maintainable the code was. However, to quote Dijkstra, other
                     factors affect the "goodness" of code, such as control flow.
                     In 1976, McCabe proposed a technique called Cyclomatic com-
-                    plexity for scoring the control flow a program takes [ 19 ]. This was
+                    plexity for scoring the control flow a program takes. This was
                     an attempt to "provide a quantitative basis for modularization" as a
                     way to identify in advance modules which will be difficult to main-
                     tain. McCabe provides the definition "Definition 1: The cyclomatic
@@ -314,19 +313,19 @@
                     interpretations of the method, with some researchers testing com-
                     plexity at only a module level, while others at a program level,
                     summing up the scores of individual modules. This inconsistency
-                    disrupts the comparison of results [ 30 , 39 ]. While none of these
+                    disrupts the comparison of results. While none of these
                     metrics are perfect estimates of complexity, they allow for fast,
                     accurate judgment of code. Halstead and McCabe developed their
                     metrics during an era of batch programming where systems were
                     significantly smaller today. While they may be ill-suited for large,
                     industrial software, this makes them the perfect solution to mea-
                     suring smaller, generated code pieces which inherently lack the
-                    complexity in which these metrics can not accurately judge [31].
+                    complexity in which these metrics can not accurately judge.
                     To accurately ascertain a meaningful judgement of code quality,
                     several measurements must be taken that account for the com-
                     plexity of each line and the path the code can take throughout   
                     he program. This approach of using code metrics to judge LLM
-                    generation is sparse in the current field of research [ 23 , 26 ], with
+                    generation is sparse in the current field of research, with
                     researchers focusing on functional performance. The practicality
                     of code generation relies in large part on the maintainability of
                     the code, not just its functional performance, and requires better
