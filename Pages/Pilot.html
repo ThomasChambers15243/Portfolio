@@ -1,0 +1,437 @@
+<!DOCTYPE <!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Tom Chambers</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">    
+        <link rel="stylesheet" href="../style.css">        
+        <script defer src="../app.js"></script>
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    </head>
+    <body>
+        <div id="nav-placeholder"></div>
+        <script>
+            $(function(){
+              $("#nav-placeholder").load("nav.html");
+            });
+            // Show/hide h3 content
+            $(document).ready(function() {
+                $('h3').click(function() {
+                    $(this).next().slideToggle("slow");
+                    $(this).toggleClass('open');
+                });
+            });
+            // Scrolling from section to section
+            $(document).ready(function() {
+                $('.next-button').click(function() {
+                    var nextElement = $(this).parent().next();
+                    $('html, body').animate({
+                        scrollTop: nextElement.offset().top
+                    }, 5);
+                });
+            });
+        </script>
+
+        <section class="pilot">
+            <h1>Pilot Study</h1>
+            <p>This page contains information about a pilot study that was conducted in preparation for my University Dissertation.
+                <br>First shown is the literature review, then methodology of the pilot study itself and finally the results of the pilot study.
+                <br></br>https://github.com/ThomasChambers15243/Dissertation
+            </p>
+            <h2>Background Review</h2>
+            <h3>Introduction</h3>
+            <p>This study will investigate the practicality of using large-language
+                models to generate Python code. These models take in a human-
+                written prompt to generate an output, the output attempting to
+                fulfil the desired task of the prompt through code. Within the last
+                few years, these models have been used to generate code in many
+                programming languages, straight into a programmer’s IDE. With
+                many large tech companies investing in generative models, such as
+                Google and META [ 20 , 28], and bespoke versions of these models
+                being used commercially for code productivity, such as Github’s
+                Copilot and Sourcery [ 22 , 25], their use by programmers is rapidly
+                increasing. LLM are often described as a black box [3], this describes
+                how the user can input data and receive a response, without an
+                understanding of the internals. 
+                <br><br>        
+                This form of abstraction is very com-
+                mon within programming, however, where LLM stand out is that
+                the engineers behind them also do not know. Because the internal
+                ’synapses’ of the neural network are automatically arranged by the
+                model itself, it’s extremely difficult for an engineer to decipher. Due
+                to this black box behaviour, an intimate understanding of how these
+                code snippets are generated is unknown, and there’s a risk that 
+                poorly written, buggy and insecure code could be used by novice
+                and experienced programmers alike. The need to understand the
+                level of quality of outputs is paramount before these generation
+                tools become widespread in education and industry, so the conse-
+                quences can be best understood [1]. The focus of this study will
+                be on Open-AI’s GPT models due to their API, success and public
+                prominence.</p>
+            <h3>Understanding Code Generation</h3>
+            <p>Code generation is not new, being used in many computing pro-
+                cesses already, perhaps most well-known is the use in compilers to
+                produce code optimisation and executable machine code. Further-
+                more, code generation from a human prompt has been discussed for
+                over 50 years. PROW [35 ] was an early code generation tool that
+                could produce Perl code from an input written in predicate calculus.
+                However, as discussed two years later by Manna and Waldinger
+                [ 18 ], "programmers might find such a language lacking in read-
+                ability and conciseness." They went on to predict a future program
+                synthesizer; one that works with the programmer to produce seg-
+                ments of code that can be incorporated into the program. They
+                argue it would be a "more practical system" with greater "power".
+                Fifty years later in 2022, with the public release of ChatGPT [ 24 ],
+                public awareness of LLM significantly increased due to the wide
+                adaption of its chat feature. Generation models have been used
+                for years to write essays, generate art and synthesise an actor’s
+                voice, the implications of such have caused many to re-evaluate the
+                current state and future of educational and business environments
+                [ 7, 10 , 16 , 37 ], but more recently the use of generation has become
+                more relevant in a programmer’s workflow.</p>
+            <h3>The Background of LLM</h3>
+            <p>The rising popularity of LLM generation is in-large due to their
+                apparent success at task completion, giving them the appearance
+                of being intelligent. However, by any definition today, at most it’s
+                pseudo-intelligence. This section will first give a very brief overview
+                of the workings of LLM, why they’re pseudo-intellectual and then
+                their current use today.
+                Large language models are neural networks trained to predict the
+                next token in a sequence, the token, in the case of code generation,
+                being characters in a string.
+                <br><br>
+                GPT stands for Generative Pre-trained Transformer. The genera-
+                tion means that it can predict the next token, pre-trained means
+                that the model has received a large amount of data and has had its
+                bias adjusted and a transformer is an encoder-decoder network that
+                adds self-attention. Self-attention results in significant performance
+                increases in accurate prediction. LLM that have been pre-trained
+                can be further fine-tuned to improve performance at specific predic-
+                tions. Although the prediction can be extremely accurate, there is
+                no logical reasoning behind the prediction that can be seen as akin
+                to human intelligence. The accurate predictions serve to mimic
+                human intelligence.<br><br>
+                In 2021 OpenAI released their fine-tuned model GPT-3 codex,
+                trained on 54 million public software repositories hosted on GitHub
+                [ 4]. Released the same year [22], Github’s CoPilot is a generation
+                model with a heavy reliance on Codex. To test the functional perfor-
+                mance of Codex, the team behind OpenAI released the humanEval
+                data set. A public repository to benchmark the performance of
+                generated code. They also implemented the technique pass@k, the
+                formula for which can be seen in the appendix section .3. An unbi-
+                ased calculator to estimate the success of a model given k samples.
+                Functional performance is found by the ability to generate code
+                from a prompt that successfully passes given unit tests, failures
+                often due to syntax errors, invoking out-of-scope functions or ref-
+                erencing non-existent variables. Within their data set, Codex had a
+                higher performance than all previous GPT-model, solving 70.2% of
+                problems with 100 samples. The functional performance of Codex
+                and models alike have been replicated numerously [26 , 29 , 38 , 40 ],
+                with Codex being able to outperform students in even CS1 ques-
+                tions and, although performance dropped, still compete with stu-
+                dents in CS2 questions [9]. CS1 questions covered the basics of
+                programming, with topics such as "variables, arithmetic, condi-
+                tional branches, loops, reading and writing to files, and functions".
+                CS2 took questions further, covering questions about hashing, dis-
+                crete mathematics, OOP and ADTs. During these questions, the
+                model could recognise algorithms by name and produce efficient
+                solutions for those problems, such as tree or graph searches and
+                modifications.
+            </p>
+            <h3>Issues With The Current State of Code Generation</h3>
+            <p>Large language models have proven to appear highly performant,
+                however, several technical and practical limitations should be care-
+                fully understood.<br><br>
+                Firstly, models are not uniform across languages. Nguyen and
+                Nadi [ 26 ] found that CoPilot functionally performed best when
+                writing in Java and worst in Javascript. Other researchers have
+                written their own fine-tuned model, Poly-Coder, based on the GPT-
+                2 architecture, which outperforms all GPT-based models in the C
+                language [ 40 ]. Its was argued that the low score in C was possibly
+                due to a problem with the data-set and fine-tuning process being
+                over-reliant on Python and under focused in C.<br><br>
+                Secondly, the results are not one-shot. Codex can respond with
+                very variant accuracy in its solutions, hence why most investiga-
+                tions use several responses, such as with pass@k often using 100
+                samples. This is not the standard programming experience; a stu-
+                dent does not submit 100 solutions to be marked by their professor,
+                leading to the comparison being fallacious. An attempt to control
+                this compared students to Codex, except also gave students multiple
+                attempts at solutions, their success frequently increases with each
+                attempt. However, they found that Codex was still competitive with
+                students, even after multiple submissions [9].<br><br>
+                Thirdly, responses vary significantly depending on the value of
+                the model’s temperature. Temperature is a value used in neural net-
+                works to increase entropy (effectively randomness) in the softmax
+                distribution, the distribution which controls the quality and diver-
+                sity of the predictions. This affects the output layer where tokens
+                are sampled from. A higher temperature increases how ’surprising’
+                the next token will be [ 12, 36 ]. Multiple studies have found that
+                with a higher temperature, models can achieve a higher pass@k
+                score at larger samples, despite producing more erroneous code.
+                Across multiple studies, researchers found optimal performance at
+                T0.6, with T0.2 and T0.8 also performing well. Temperature and
+                sample size were found to be proportional, this is likely due to the
+                diversity of code at higher temperatures needing a higher sample
+                rate to score [4, 27, 40].<br><br>
+                Fourthly, there is a significant reason to question whether the
+                success of generated code translates into actual programmer perfor-
+                mance, even with their access becoming more streamlined. CoPilot
+                can directly embed into your IDE, finishing off lines or blocks of
+                code for the user. There is also a chat option in VS Code where
+                prompts can be given and code can be directly copied into the user’s
+                file, currently in beta. However, when a programmer uses a piece of
+                code, they have to evaluate the code before use as it might contain
+                bugs, be a sub-optimal solution or generally poorly written. In a
+                study of 24 participants using Copilot [34], they found that even
+                though code generation gave promising results, it did not improve
+                overall programming time or the success rate of those participants
+                using the tool. CoPilot even led to more task failures in the medium
+                and hard category of tasks, where programmers might have not
+                understood the generated code or spent longer debugging the code
+                than if they had just written it themselves. Nevertheless, 23/24 of
+                the participants still found it more useful than Intellisense and the
+                majority "overwhelmingly preferred using Copilot in their program-
+                ming workflow since Copilot often provided a good starting point
+                to approach the programming task."
+                <br><br>
+                The study showed CoPilot to be an imperfect aid. It can allow a programmer to instantly gener-
+                ate an often feasible solution to a task, however, in doing so they
+                remove themselves from the task of problem-solving, which often
+                exposes the programmer to online discussion and related topics,
+                advancing their technical skill. Other researchers have discussed
+                this problem, hypothesising that code generation is an efficient tool
+                for seasoned programmers, but can turn into a liability when used
+                by novice programmers who do not fully understand the problem,
+                context and generated solution [23].</p>
+                <h3>Quality Code</h3>
+                <p>Good quality code is vital for creating maintainable software that
+                    can last, but still, there is discourse around what good quality code
+                    is. In 1969 Dijkstra wrote in a letter, "A programmer has only done a
+                    decent job when his program is flawless and not when his program is
+                    functioning properly only most of the time." He criticized the attitude
+                    of programmers of his time, something that he saw as a "software
+                    crisis". He saw programmers treating debugging as a necessity,
+                    rather than what he believed, an inevitable consequence of poorly
+                    written systems. He argued that writing "intellectually manageable"
+                    programs would reduce the amount of reasoning involved in jus-
+                    tifying their proper operation and a reduction in the number of
+                    test cases. If done correctly, he claims that "the correctness can be
+                    shown a priori", so a need for zero test cases. Dijkstra laid out a
+                    fundamental argument for why quality code is necessary which
+                    has been built upon ever since [6].<br><br>
+                    Recognising when code is "intellectually manageable" is a com-
+                    plex issue. Greg Michaelson wrote that "Programming style is no-
+                    toriously difficult to characterise" and that imperative languages
+                    have been the "source of endless theological disputes", such as the
+                    use of GOTOS, the use of recursion over iteration or the number
+                    of parameters a sub-program should have [21 ]. While for the most
+                    part, experts agree on the abandonment of goto’s in structured
+                    programming [5, 15], the rest are still up for debate.
+                    The quality of generated code is vital if the produced code is
+                    ever expected to be used in a practical sense. However, the common
+                    mantra, garbage in, garbage out is just as true now, the quality of
+                    written code largely depends on the quality of the code within the
+                    data set. Unfortunately, the fine details of the data sets used for
+                    available LLM are kept private, [ 40], so to assess the quality of code,
+                    we can use code metrics as an attempt to judge the outputted code.</p>
+                    <h3>Code Analysis</h3>
+                    <div>
+                    <p>
+                    Pre-1980, software metrics generally worked as a regression model
+                    between two variables, conceptually simple, mostly relying on
+                    resources and quality. However, during the mid-late 70s, software
+                    metrics saw a new direction with Halstead and McCabe [ 8 ]. They
+                    extracted information from the code design rather than just the
+                    static code.
+                    Halstead developed a set of formulas that, when given a code
+                    input, would produce a series of scores based on the number of
+                    unique and total amount of operands and operators used [17 ]. The
+                    definition of Operands and Operators has slightly different mean-
+                    ings depending on the implementation, but generally, operators
+                    are all normal operators, keywords and brackets of all kinds ( (),
+                    [], ). Operands are variables, methods or function declarations
+                    and constants such as Boolean values and strings. Halstead metrics
+                    produce useful scores of the complexity of code, such as an esti-
+                    mate of the time to program and the potential for bugs. Although
+                    Halstead metrics are not free from critique, various definitions can
+                    cause trouble when comparing scores, the use of magic numbers (18
+                    appearing in the Time formula) appears to be arbitrary and it can
+                    be argued that the use of operands and operators is too simplistic
+                    for modern programming.<br><br>
+                    Other code metrics take different approaches to Halstead to
+                    achieve the same goal of scoring code. The Flesch-Kincaid readabil-
+                    ity test [ 14 ] is a method to score the readability of human written
+                    language, based on the number of syllables per words and words
+                    per sentence, similar to how Halstead used operators and operands.
+                    Kurt Starsinic developed a module, Fathom.pm, to apply the Fleshc-
+                    Kincaid test to Perl code, producing a score based on the number
+                    of tokens per expression, expressions per statement and statements
+                    per subroutine [32].<br><br>
+                    The formula would produce a score from 1 - 7, where 5 is "Trival"
+                    and 7 is "Very Hairy". However, he did not provide any justification
+                    for the weights used in the formula except that they were fined-
+                    tuned through trial and error. Börstler, Caspersen and Nordström
+                    would later produce a similar metric method to Starsinic, while
+                    also using the FLesch-Kincaid test. They introduced the Software
+                    Readability Ease Score (SRES) by treating the "lexemes of a pro-
+                    gramming language as syllables, its statements as words, and its
+                    units of abstraction as sentences" [ 2]. They argued that this type
+                    of static code analysis was a clear indicator of how readable, and
+                    thus maintainable the code was. However, to quote Dijkstra, other
+                    factors affect the "goodness" of code, such as control flow.
+                    In 1976, McCabe proposed a technique called Cyclomatic com-
+                    plexity for scoring the control flow a program takes [ 19 ]. This was
+                    an attempt to "provide a quantitative basis for modularization" as a
+                    way to identify in advance modules which will be difficult to main-
+                    tain. McCabe provides the definition "Definition 1: The cyclomatic
+                    number V(G) of a graph G with n vertices, e edges, and p connected
+                    components is <br><br>
+                    <div style="display: flex; justify-content: center;">
+                        𝑣 (𝐺) = 𝑒 − 𝑛 + 𝑝
+                    </div>
+                    <br><br>
+                    Cyclomatic complexity can be viewed as building up graphs from
+                    smaller components, examples of which McCabe included.
+          
+                    <figure style="display: flex; flex-direction: column; align-items: center;">
+                        <img src="../pics/mcCabe.jpg" alt="Cyclomatics" width="350px" height="200px">
+                        <figcaption>Generated Control Structure Graphs [19]</figcaption>
+                    </figure>    
+                    However, Cyclomatic complexity does not handle all the intri-
+                    cacies of code, especially since it does not consider else, do & try,
+                    object creation and method calls. Furthermore, there are different
+                    interpretations of the method, with some researchers testing com-
+                    plexity at only a module level, while others at a program level,
+                    summing up the scores of individual modules. This inconsistency
+                    disrupts the comparison of results [ 30 , 39 ]. While none of these
+                    metrics are perfect estimates of complexity, they allow for fast,
+                    accurate judgment of code. Halstead and McCabe developed their
+                    metrics during an era of batch programming where systems were
+                    significantly smaller today. While they may be ill-suited for large,
+                    industrial software, this makes them the perfect solution to mea-
+                    suring smaller, generated code pieces which inherently lack the
+                    complexity in which these metrics can not accurately judge [31].
+                    To accurately ascertain a meaningful judgement of code quality,
+                    several measurements must be taken that account for the com-
+                    plexity of each line and the path the code can take throughout   
+                    he program. This approach of using code metrics to judge LLM
+                    generation is sparse in the current field of research [ 23 , 26 ], with
+                    researchers focusing on functional performance. The practicality
+                    of code generation relies in large part on the maintainability of
+                    the code, not just its functional performance, and requires better
+                    understanding.           
+                    </p>
+                    </div> 
+                    <button class="next-button" style="margin-top:25px">Research</button>               
+        </section>        
+
+        <section>
+            <h1>Research</h1>
+            <p>
+                <b>RQ:</b> Can Large Language Models generate code for small scale problems
+                 that can perform better than model, human-written answers.
+                <br><br>
+                <b>Null Hypothesis 𝐻0:</b> GPT3.5 can generate code for small-scale coding problems 
+                that produce an equal or worse total score when compared to model, human answers.
+                <br><br>
+                <b>Alternative Hypothesis 𝐻1:</b> GPT3.5 can generate code for small-scale coding problems
+                 that produce a greater total score than model, human-written answers. 
+            </p>
+            <div class="pilot">
+                <h3>Methodology</h3>
+                <div>
+                    <p>
+                        The study will compare the Halstead metrics scores between two groups of code samples,
+                        gpt-generated and human. 5 problems/samples, with 5 human written answers and 500
+                        generated, 100 per sample, using the model gpt-3.5. <br><br> 
+                        For each problem, gpt3.5 generates 100 solutions, were then the metric are calculated and 
+                        averaged to produce one score per problem. For each human answer, the Halstead score
+                        is calculated per sample.
+
+                        <br><br>
+                        <h4>Stats</h4>
+                        To test the null hypotheses, an independent sample
+                        1-tailed t-Test was used to compare the GPT and human groups. This test
+                        is a parametric test that compares whether there is a statistically
+                        significant difference between the two groups’ means.<br>
+                        T-Tests can only be used to test data that is normally distributed, so
+                        a Shapiro test is used to ensure this before further analysis.
+                        <ul>
+                            <li><b>The independent variables</b> are the two groups, the collection
+                                of GPT generations and human answers.</li>
+                        </ul>
+                        <li><b>The dependent variable</b> is metric score for each sample.
+                            The data is the sum total of the code's Halstead metrics. 
+                            Its numerically continuous, ratio values. </li>
+
+                        <br><br>
+                        </p>                                                  
+                </div>               
+            </div>    
+            <div class="pilot">        
+                <h3>Results</h3>
+                    <div>
+                        <table>
+                            <tr>
+                                <th>Problem No.</th>
+                                <th>Iterations</th>
+                                <th>Human Score</th>
+                                <th>GPT3.5 Score</th>
+                                <th>Difference</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>20</td>
+                                <td>1237.0</td>
+                                <td>1263.1</td>
+                                <td>-26.1</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>20</td>
+                                <td>7003.4</td>
+                                <td>5892.2</td>
+                                <td>1111.2</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>20</td>
+                                <td>5071.8</td>
+                                <td>5789.6</td>
+                                <td>-717.8</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>20</td>
+                                <td>259.5</td>
+                                <td>746.2</td>
+                                <td>-486.7</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>20</td>
+                                <td>206.8</td>
+                                <td>176.1</td>
+                                <td>10</td>
+                            </tr>
+                        </table>
+                        <h4>Interpreting Results</h4>
+                        <p>
+                            
+                            The difference is calculated by human score - gpt score. The lower the score, the better the metric.
+                            Overall, gpt generations scores 436.6 total points higher than human answers.<br>
+                            
+                        </p>
+                    </div>
+            </div>
+        </section>
+
+
+    </body>
+</html>
